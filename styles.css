@@ -1,0 +1,832 @@
+/* Global Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+}
+
+.navbar-nav .nav-link {
+    color: #39a9db;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #2376bc;
+}
+
+/* Header */
+header {
+    background: url('media/header.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.2em;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.5em;
+    margin-bottom: 80px;
+}
+
+.cta-btn {
+    background-color: #b92020;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #2376bc;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 0;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+section p {
+    font-size: 18px;
+}
+
+section h2 {
+    color: #2376bc;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sub {
+    font-size: 1.2rem;
+}
+
+.icon-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 85%;
+}
+
+.icon-box i {
+    font-size: 2.5em;
+    color: #2376bc;
+    margin-bottom: 15px;
+}
+
+.icon-box h4 {
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+}
+
+.sub-box {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    list-style-type: circle
+}
+
+/* Underline Animation */
+.underline-on-scroll {
+    display: inline-block;
+    position: relative;
+}
+
+.underline-on-scroll::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #b92020;
+    transition: width 0.5s;
+}
+
+.underline-on-scroll.active::after {
+    width: 100%;
+}
+
+
+
+#problemas h2 {
+    margin-top: 5rem;
+}
+
+
+
+
+
+/* Sección de Soluciones */
+.solutions-section {
+    background-color: #39a9db; /* Fondo azul celeste */
+    padding: 80px 0; /* Espaciado superior e inferior */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    margin-left: calc(-50vw + 50%); /* Centramos la sección */
+    text-align: center;
+    position: relative; /* Para control adicional de diseño */
+    height: 90vh;
+}
+
+.solutions-content {
+    max-width: 1200px; /* Ancho máximo para centrar el contenido */
+    margin: 0 auto; /* Centra el contenido dentro del contenedor */
+}
+
+.solutions-section h2 {
+    color: #ffffff; /* Texto en blanco para resaltar sobre el fondo */
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.toggle-button {
+    background-color: #fff;
+    border: 2px solid #2376bc;
+    color: #2376bc;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle-button:hover {
+    background-color: #e9f0ff;
+}
+
+.toggle-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    border-left: 3px solid #b92020;
+    background-color: #f9f9f9;
+    border-radius: 0 10px 10px 10px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.toggle-content.open {
+    max-height: 150px; /* Ajusta este valor según el contenido */
+    padding: 10px 15px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+    height: 100vh;
+}
+
+.testimonials-section h2 {
+    font-size: 2.5rem;
+    color: #2376bc;
+    margin-bottom: 10px;
+}
+
+.testimonials-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.testimonial-card {
+    min-width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockquote {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+.blockquote-footer {
+    color: #888;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 66, 211, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 1rem;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: rgba(18, 87, 184, 0.8);
+}
+
+
+
+
+/* Sección de Proceso */
+/* Sección de Proceso */
+.process-section {
+    background-color: #39a9db; /* Fondo azul */
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    height: auto; /* Permitir altura automática */
+    position: relative; /* Necesario para el control de la posición de los elementos */
+}
+
+
+.process-section h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.process-section h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2376bc;
+}
+
+.process-section p {
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 1.5em;
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 100%; /* Ajuste de altura para ocupar todo el contenedor */
+    padding: 20px 0;
+}
+
+
+/* Línea entre las cards */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: -20px; /* Ajusta la posición final más allá del contenedor */
+    width: 4px;
+    background: #ffffff;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%; /* Ajusta para ocupar el 60% del ancho */
+    padding: 20px 0;
+    z-index: 1;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.timeline-content p {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Timeline Icon */
+.timeline-icon {
+    font-size: 2.5em;
+    color: #2376bc;
+    margin-bottom: 10px;
+}
+
+/* Animaciones para las cards de proceso */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-100px); /* Mueve inicialmente la card fuera de la vista */
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.timeline-item.animate-right {
+    transform: translateX(100px); /* Para las cards que deben aparecer desde la derecha */
+}
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateX(0); /* Vuelve la card a su posición original */
+}
+
+
+/* Sección de Planes */
+#planes {
+    padding: 80px 0;
+    text-align: center;
+}
+
+#planes h2 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #2376bc;
+    font-weight: bold;
+}
+
+#planes h4 {
+    font-weight: bold;
+}
+
+#planes .icon-box p {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.icon-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadido para efecto suave de box-shadow */
+    height: 85%;
+}
+
+.icon-box i {
+    font-size: 2.5em;
+    color: #2376bc;
+    margin-bottom: 15px;
+}
+
+.icon-box h4 {
+    font-size: 1.4em;
+    margin-top: 10px;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
+}
+
+/* Estilos de las listas dentro de las cards */
+.icon-box ul {
+    list-style-type: none; /* Elimina las viñetas */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.icon-box ul li {
+    margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+    text-align: center; /* Alineación izquierda para legibilidad */
+    font-size: 1.15rem;
+}
+
+/* Estilos para las cards */
+.icon-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease, box-shadow 0.6s ease, opacity 0.6s ease; /* Transición añadida para la opacidad */
+    opacity: 0; /* Ocultas por defecto */
+    transform: translateY(30px); /* Desplazamiento hacia abajo por defecto */
+    visibility: hidden; /* Ocultas por defecto */
+}
+
+/* Estilo de hover */
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación de entrada */
+.icon-box.visible {
+    opacity: 1; /* Aparecen */
+    transform: translateY(0); /* Volver a su posición original */
+    visibility: visible; /* Se muestran */
+}
+
+
+
+
+
+
+/* Estilos para el Banner Rotativo */
+.banner-rotativo {
+    width: 100%;
+    height: 12vh; /* Altura máxima de 20vh */
+    overflow: hidden; /* Oculta contenido que se desborde */
+    background-color: #23bc7f; /* Fondo azul */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    position: relative; /* Para la animación */
+}
+
+.banner-content {
+    display: flex; /* Para alinear horizontalmente */
+    animation: moveBanner 10s linear infinite; /* Animación de movimiento */
+}
+
+.banner-content span {
+    color: #ffffff; /* Texto blanco */
+    font-size: 4rem; /* Tamaño de fuente grande */
+    font-weight: bold;
+    margin: 0 2rem; /* Espaciado entre palabras */
+    white-space: nowrap; /* Evita que las palabras se rompan en varias líneas */
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateX(100%); /* Comienza fuera de la pantalla */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fuera de la pantalla en el otro lado */
+    }
+}
+
+
+
+
+
+
+
+/* Estilo para la sección de oferta */
+.full-width-background {
+    background-color: #2376bc; /* Color verde agua */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    margin-left: calc(50% - 50vw); /* Asegura que se expanda hacia los bordes */
+    padding: 60px 0; /* Espaciado */
+}
+
+#oferta .full-width-background {
+    height: 270vh;
+}
+
+/* Estilo para el título de la sección de oferta */
+#oferta h2 {
+    font-size: 3rem;
+    color: #ffffff; /* Título en blanco */
+    margin-bottom: 20px;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+/* Estilo para los subtítulos de la sección de oferta */
+#oferta .offer-description,
+#oferta .offer-cta {
+    color: #ffffff; /* Subtítulos en blanco */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Ajuste de estilos para botones */
+#oferta .btn-outline-primary,
+#oferta .btn-outline-warning {
+    margin-top: 20px;
+}
+
+
+
+
+/* Estilo para la tabla dentro de la sección de oferta */
+#oferta .table {
+    border-radius: 10px; /* Borde redondeado */
+    overflow: hidden; /* Para asegurar que el contenido no sobresalga del borde */
+    margin-top: 40px; /* Espacio arriba de la tabla */
+    margin-bottom: 7rem;
+    
+}
+
+#oferta .table thead th {
+    background-color: #ffffff; /* Fondo de los encabezados */
+    color: #323232; /* Texto blanco */
+    padding: 15px; /* Más espacio dentro de las celdas de encabezado */
+    border: none; /* Quitar borde */
+    font-size: 1.2rem;
+}
+
+#oferta .table tbody td {
+    padding: 20px; /* Mayor padding dentro de las celdas del cuerpo */
+    border-top: 1px solid #e0e0e0; /* Borde superior de las celdas */
+    border-bottom: none; /* Quitar borde inferior */
+}
+
+
+
+#oferta .table tbody tr:first-child td {
+    border-top: none; /* Quitar el borde superior de la primera fila */
+}
+
+#oferta .table tbody tr:last-child td {
+    border-bottom: none; /* Quitar el borde inferior de la última fila */
+}
+
+#oferta .plan-header {
+    background-color: #ffffff; /* Fondo de encabezados */
+    color: #1c1c1c; /* Texto en blanco */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2em; /* Tamaño de fuente */
+    padding: 15px; /* Espaciado adicional */
+}
+
+#oferta .table .fa-check-circle,
+#oferta .table .fa-times-circle {
+    font-size: 1.8em; /* Ajusta el tamaño a tu preferencia */
+}
+
+
+/* Botones de tabla */
+#oferta .table button {
+    padding: 1rem;
+    margin-top: 15px; /* Espacio arriba de los botones */
+}
+
+#oferta .table button:hover {
+    padding: 1rem;
+    margin-top: 15px; /* Espacio arriba de los botones */
+    background-color: #b92020;
+    color: #e0e0e0;
+}
+
+
+/* Botones de tabla */
+#oferta a {
+    background-color: #ffffff;
+    color: #1d1d1d;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.5em;
+    transition: background 0.3s ease;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+#oferta a:hover {
+    background-color: #b92020;
+    color: white;
+
+}
+
+
+
+
+
+/* Estilo para la sección de contacto con overlay */
+/* Sección de contacto */
+.contacto-section {
+    background: url('media/oferta.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    margin-left: calc(50% - 50vw); /* Asegura que se expanda hacia los bordes */
+    padding: 80px 0; /* Espaciado */
+    text-align: center;
+    color: #ffffff; /* Texto blanco */
+    position: relative; /* Para overlay */
+}
+
+.contacto-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 7, 68, 0.182); /* Overlay oscuro */
+    z-index: 1; /* Colocar detrás del contenido */
+}
+
+.contact-content {
+    max-width: 800px; /* Ancho máximo para centrar el contenido */
+    margin: 0 auto; /* Centra el contenido dentro del contenedor */
+    position: relative; /* Para asegurar que el contenido esté sobre el overlay */
+    z-index: 2; /* Colocar el contenido sobre el overlay */
+}
+
+
+/* Botones de contacto */
+.contact-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px; /* Espacio entre botones */
+}
+
+.contact-button i {
+    color: #ffffff; /* Icono en blanco */
+    margin-bottom: 10px;
+}
+
+.contact-button .btn {
+    background-color: #2376bc;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 10px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+}
+
+.contact-button .btn:hover {
+    background-color: #b92020;
+}
+
+/* Estilo para animación de entrada */
+.fade-in {
+    opacity: 0; /* Oculto por defecto */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Suave transición */
+}
+
+.fade-in.show {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Volver a su posición original */
+}
+
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 0; /* Ajuste para eliminar el espacio blanco */
+    position: relative; /* Para posicionar los elementos correctamente */
+}
+
+.social-media {
+    margin-top: 20px; /* Espacio superior para separar del resto del contenido */
+}
+
+.social-media a {
+    color: #fff; /* Color de los iconos */
+    font-size: 1.5em; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espaciado entre los iconos */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+    text-decoration: none; /* Eliminar subrayado o guiones */
+}
+
+.social-media a::after {
+    content: ''; /* Eliminar cualquier pseudo-elemento que pueda estar creando el guion */
+}
+
+.social-media a:hover {
+    color: #39a9db; /* Color al pasar el cursor por encima */
+}
+
+footer a {
+    color: #fff;
+}
+
+
+
+/* Contact Form Styles */
+.contact-section form {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+/* Adjustments for the header background */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.4);
+    z-index: 1;
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
