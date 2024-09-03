@@ -244,82 +244,56 @@ section h2 {
 
 
 .testimonials-section {
-    padding: 50px 20px;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.testimonial-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px; /* Altura mínima para cada testimonio */
     text-align: center;
-    height: 100vh;
 }
 
-.testimonials-section h2 {
-    font-size: 2.5rem;
-    color: #2376bc;
-    margin-bottom: 10px;
-}
-
-.testimonials-section p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.carousel-container {
-    position: relative;
-    overflow: hidden;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-}
-
-.testimonial-card {
-    min-width: 100%;
-    background: #fff;
+.testimonial-content {
+    max-width: 700px; /* Ancho máximo para el contenido del testimonio */
     padding: 20px;
-    border-radius: 10px;
+    background: #fff;
+    border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-
+    height: 250px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.blockquote {
-    font-size: 1.1rem;
-    color: #ffffff;
-    text-align: left;
+.testimonial-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-.blockquote-footer {
-    color: #888;
-    text-align: center;
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2376bc;
 }
 
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(26, 66, 211, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #2376bc; /* Color personalizado para los controles del carrusel */
     border-radius: 50%;
-    z-index: 10;
+    width: 40px;
+    height: 40px;
 }
 
-.prev-btn {
-    left: 1rem;
-}
 
-.next-btn {
-    right: 10px;
-}
 
-.carousel-btn:hover {
-    background: rgba(18, 87, 184, 0.8);
-}
+
+
+
 
 
 

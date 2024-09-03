@@ -140,39 +140,55 @@
 
 
     <section id="testimonios" class="testimonials-section">
-        <h2 class="text-center fade-in">Lo que dicen nuestros clientes</h2>
-        <p class="text-center fade-in">Mirà lo que nuestros clientes dicen de nosotros</p>
-        <div class="carousel-container fade-in">
-            <div class="carousel-track">
-                <div class="testimonial-card">
-                    <blockquote class="blockquote">
-                        <p>"Muy atentos, interesados por entender lo que necesitas. Prolijos al trabajar y claros al reportar."</p>
-                        <p class="blockquote-footer">Jorge</p>
-                    </blockquote>
+        <div class="container">
+            <h2 class="text-center fade-in">Lo que dicen nuestros clientes</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"Muy atentos, interesados por entender lo que necesitas. Prolijos al trabajar y claros al reportar."</p>
+                                <p class="testimonial-author">- Jorge</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"Excelente equipo de trabajo y profesionales. Logran captar la escénica de cada tarea para reflejarlas en los trabajos solicitados."</p>
+                                <p class="testimonial-author">- Gabriela Gallo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"En mi experiencia trabajando con los chicos, todo súper bien, profesional y prolijo!!! Siempre responden súper rápido."</p>
+                                <p class="testimonial-author">- María José Mas D'Alessandro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"Me pude olvidar del tema... qué más se puede pedir? La campaña en redes fue genial, se multiplicaron notablemente las consultas."</p>
+                                <p class="testimonial-author">- Gloria Canseco</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <blockquote class="blockquote">
-                        <p>"Excelente equipo de trabajo y profesionales. Logran captar la escénica de cada tarea para reflejarlas en los trabajos solicitados."</p>
-                        <p class="blockquote-footer">Gabriela Gallo</p>
-                    </blockquote>
-                </div>
-                <div class="testimonial-card">
-                    <blockquote class="blockquote">
-                        <p>"En mi experiencia trabajando con los chicos, todo súper bien, profesional y prolijo!!! Siempre responden súper rápido."</p>
-                        <p class="blockquote-footer">María José Mas D'Alessandro<p>
-                    </blockquote>
-                </div>
-                <div class="testimonial-card">
-                    <blockquote class="blockquote">
-                        <p>"Me pude olvidar del tema... qué más se puede pedir? La campaña en redes fue genial, se multiplicaron notablemente las consultas."</p>
-                        <p class="blockquote-footer">Gloria Canseco</p>
-                    </blockquote>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-btn prev-btn">&#10094;</button>
-            <button class="carousel-btn next-btn">&#10095;</button>
         </div>
     </section>
+    
     
     
     
