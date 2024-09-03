@@ -284,7 +284,7 @@ section h2 {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: #2376bc; /* Color personalizado para los controles del carrusel */
-    border-radius: 50%;
+    border-radius: 10%;
     width: 40px;
     height: 40px;
 }
