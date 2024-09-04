@@ -440,18 +440,17 @@ section h2 {
 
 .icon-box {
     background: #fff;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
     margin-top: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadido para efecto suave de box-shadow */
-    height: 85%;
 }
 
 .icon-box i {
-    font-size: 2.5em;
+    font-size: 1em;
     color: #2376bc;
     margin-bottom: 15px;
 }
@@ -459,6 +458,7 @@ section h2 {
 .icon-box h4 {
     font-size: 1.4em;
     margin-top: 10px;
+    color: #2376bc;
 }
 
 .icon-box:hover {
@@ -468,20 +468,21 @@ section h2 {
 
 /* Estilos de las listas dentro de las cards */
 .icon-box ul {
-    list-style-type: none; /* Elimina las viñetas */
+    list-style-type: circle; /* Elimina las viñetas */
     padding: 0; /* Elimina el relleno predeterminado */
+    text-align: left;
 }
 
 .icon-box ul li {
     margin-bottom: 10px; /* Espaciado entre elementos de la lista */
-    text-align: center; /* Alineación izquierda para legibilidad */
-    font-size: 1.15rem;
+    text-align: left; /* Alineación izquierda para legibilidad */
+    font-size: 1rem;
 }
 
 /* Estilos para las cards */
 .icon-box {
     background: #fff;
-    padding: 40px;
+    padding: 2rem 28px;
     border-radius: 10px;
     text-align: center;
     margin-bottom: 40px;
@@ -496,7 +497,7 @@ section h2 {
 /* Estilo de hover */
 .icon-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(4, 105, 199, 0.549);
 }
 
 /* Animación de entrada */
@@ -506,7 +507,10 @@ section h2 {
     visibility: visible; /* Se muestran */
 }
 
-
+.sub-box {
+    list-style: square;
+    margin-left: 1.8rem;
+}
 
 
 
@@ -583,7 +587,11 @@ section h2 {
 /* Ajuste de estilos para botones */
 #oferta .btn-outline-primary,
 #oferta .btn-outline-warning {
-    margin-top: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: #2376bc;
+    border-color: rgb(255, 255, 255);
+    border-radius: 30px;
 }
 
 
