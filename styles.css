@@ -6,6 +6,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
 .container {
@@ -33,6 +34,15 @@ body {
 
 .navbar-nav .nav-link:hover {
     color: #2376bc;
+}
+
+#oferta-navitem a {
+    color: red;
+}
+
+
+.navbar-toggler {
+    background-color: #2376bc;
 }
 
 /* Header */
@@ -133,7 +143,7 @@ section h2 {
 .sub-box {
     margin-top: 2rem;
     margin-left: 1rem;
-    list-style-type: circle
+    list-style-type: circle;
 }
 
 /* Underline Animation */
@@ -157,22 +167,16 @@ section h2 {
     width: 100%;
 }
 
-
-
 #problemas h2 {
     margin-top: 5rem;
 }
-
-
-
-
 
 /* Sección de Soluciones */
 .solutions-section {
     background-color: #39a9db; /* Fondo azul celeste */
     padding: 80px 0; /* Espaciado superior e inferior */
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    margin-left: calc(-50vw + 50%); /* Centramos la sección */
+    width: 100%; /* Ajuste de ancho al 100% */
+    margin: 0 auto; /* Centramos la sección */
     text-align: center;
     position: relative; /* Para control adicional de diseño */
     height: 90vh;
@@ -181,6 +185,7 @@ section h2 {
 .solutions-content {
     max-width: 1200px; /* Ancho máximo para centrar el contenido */
     margin: 0 auto; /* Centra el contenido dentro del contenedor */
+    height: 120vh;
 }
 
 .solutions-section h2 {
@@ -200,7 +205,7 @@ section h2 {
 
 .toggle-button {
     background-color: #fff;
-    border: 2px solid #2376bc;
+    border: none;
     color: #2376bc;
     padding: 15px;
     text-align: left;
@@ -226,6 +231,7 @@ section h2 {
     background-color: #f9f9f9;
     border-radius: 0 10px 10px 10px;
     transition: max-height 0.5s ease, padding 0.3s ease;
+    margin-bottom: 10px;
 }
 
 .toggle-content.open {
@@ -240,12 +246,113 @@ section h2 {
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Sección "Quiénes Somos" */
+.about-us-section {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 80px 0; /* Espaciado arriba y abajo */
+}
+
+.about-us-section a {
+    color: #b92020;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.about-us-section .about-us-content {
+    text-align: left; /* Alineación a la izquierda para el texto */
+    font-size: 1.2rem;
+    color: #555; /* Color del texto */
+    padding-right: 30px; /* Espacio entre texto e imagen */
+}
+
+.about-us-section h2 {
+    color: #2376bc; /* Color del título */
+    font-size: 3rem; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.about-us-section p {
+    font-size: 1.2rem; /* Tamaño del texto del párrafo */
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Espacio entre líneas */
+}
+
+.about-us-image {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Borde redondeado */
+}
 
 
+/* Estilos para los puntos destacados */
+.highlight-card {
+    background: #ffffff; /* Fondo blanco */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: left; /* Texto alineado a la izquierda */
+    margin-bottom: 30px; /* Espaciado entre tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+    height: 100%; /* Altura adaptable */
+}
 
+.highlight-card h4 {
+    font-size: 1.6rem; /* Tamaño del subtítulo */
+    font-weight: 800;
+    color: #2376bc; /* Color del subtítulo */
+    margin-bottom: 15px; /* Espacio debajo del subtítulo */
+}
+
+.highlight-card p {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #777; /* Color del texto */
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px); /* Mueve hacia arriba en hover */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+}
+
+/* Animación para la entrada de los elementos */
+.fade-in {
+    opacity: 0; /* Oculto por defecto */
+    transform: translateY(20px); /* Comienza desplazado hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Suave transición */
+}
+
+.fade-in.show {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Volver a su posición original */
+}
+
+#roi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#quienes-somos {
+    padding-bottom: 0px;
+}
+
+#us-button {
+    color: white;
+    background-color: #b92020;
+    font-size: 1.5em; /* Tamaño de los iconos */
+    margin: 0 10px; /* Espaciado entre los iconos */
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: none;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
 .testimonials-section {
     padding: 60px 20px;
     background-color: #f9f9f9;
+    margin-top: 0px;
+    min-height: 90vh;
 }
 
 .testimonial-item {
@@ -295,10 +402,6 @@ section h2 {
 
 
 
-
-
-
-/* Sección de Proceso */
 /* Sección de Proceso */
 .process-section {
     background-color: #39a9db; /* Fondo azul */
@@ -312,7 +415,6 @@ section h2 {
     height: auto; /* Permitir altura automática */
     position: relative; /* Necesario para el control de la posición de los elementos */
 }
-
 
 .process-section h2 {
     color: #ffffff;
@@ -345,7 +447,6 @@ section h2 {
     padding: 20px 0;
 }
 
-
 /* Línea entre las cards */
 .timeline::before {
     content: '';
@@ -358,7 +459,6 @@ section h2 {
     transform: translateX(-50%);
     z-index: 0;
 }
-
 
 /* Timeline Item */
 .timeline-item {
@@ -414,7 +514,6 @@ section h2 {
     opacity: 1;
     transform: translateX(0); /* Vuelve la card a su posición original */
 }
-
 
 /* Sección de Planes */
 #planes {
@@ -512,9 +611,6 @@ section h2 {
     margin-left: 1.8rem;
 }
 
-
-
-
 /* Estilos para el Banner Rotativo */
 .banner-rotativo {
     width: 100%;
@@ -549,22 +645,12 @@ section h2 {
     }
 }
 
-
-
-
-
-
-
 /* Estilo para la sección de oferta */
 .full-width-background {
     background-color: #2376bc; /* Color verde agua */
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    margin-left: calc(50% - 50vw); /* Asegura que se expanda hacia los bordes */
+    width: 100%; /* Ajuste de ancho al 100% */
+    margin: 0 auto; /* Centramos la sección */
     padding: 60px 0; /* Espaciado */
-}
-
-#oferta .full-width-background {
-    height: 270vh;
 }
 
 /* Estilo para el título de la sección de oferta */
@@ -594,16 +680,12 @@ section h2 {
     border-radius: 30px;
 }
 
-
-
-
 /* Estilo para la tabla dentro de la sección de oferta */
 #oferta .table {
     border-radius: 10px; /* Borde redondeado */
     overflow: hidden; /* Para asegurar que el contenido no sobresalga del borde */
     margin-top: 40px; /* Espacio arriba de la tabla */
     margin-bottom: 7rem;
-    
 }
 
 #oferta .table thead th {
@@ -619,8 +701,6 @@ section h2 {
     border-top: 1px solid #e0e0e0; /* Borde superior de las celdas */
     border-bottom: none; /* Quitar borde inferior */
 }
-
-
 
 #oferta .table tbody tr:first-child td {
     border-top: none; /* Quitar el borde superior de la primera fila */
@@ -643,7 +723,6 @@ section h2 {
     font-size: 1.8em; /* Ajusta el tamaño a tu preferencia */
 }
 
-
 /* Botones de tabla */
 #oferta .table button {
     padding: 1rem;
@@ -656,7 +735,6 @@ section h2 {
     background-color: #b92020;
     color: #e0e0e0;
 }
-
 
 /* Botones de tabla */
 #oferta a {
@@ -674,19 +752,13 @@ section h2 {
 #oferta a:hover {
     background-color: #b92020;
     color: white;
-
 }
 
-
-
-
-
 /* Estilo para la sección de contacto con overlay */
-/* Sección de contacto */
 .contacto-section {
     background: url('media/oferta.jpg') no-repeat center center/cover; /* Imagen de fondo */
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    margin-left: calc(50% - 50vw); /* Asegura que se expanda hacia los bordes */
+    width: 100%; /* Ajuste de ancho al 100% */
+    margin: 0 auto; /* Centramos la sección */
     padding: 80px 0; /* Espaciado */
     text-align: center;
     color: #ffffff; /* Texto blanco */
@@ -710,7 +782,6 @@ section h2 {
     position: relative; /* Para asegurar que el contenido esté sobre el overlay */
     z-index: 2; /* Colocar el contenido sobre el overlay */
 }
-
 
 /* Botones de contacto */
 .contact-button {
@@ -752,8 +823,6 @@ section h2 {
     transform: translateY(0); /* Volver a su posición original */
 }
 
-
-
 /* Footer */
 footer {
     background: #333;
@@ -788,8 +857,6 @@ footer a {
     color: #fff;
 }
 
-
-
 /* Contact Form Styles */
 .contact-section form {
     max-width: 60%;
@@ -811,4 +878,214 @@ header::before {
 header .container {
     position: relative;
     z-index: 2;
+}
+
+
+
+
+/* Media Queries para Tablets */
+@media (max-width: 992px) {
+    /* Ajustes generales para tablets */
+    .container, .solutions-content {
+        max-width: 100%; /* Ancho completo */
+        padding: 30px 15px; /* Padding a los lados */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Centrar los elementos del navbar */
+    }
+
+    .icon-box, .highlight-card, .timeline-item, .toggle-button, #us-button, .testimonial-content {
+        padding: 20px; /* Reduce el padding */
+        margin-bottom: 20px; /* Reduce el margen inferior */
+        width: 100%; /* Ancho completo */
+    }
+
+    .row {
+        flex-direction: column; /* Column layout para todos los rows */
+        align-items: center; /* Alineación centrada */
+    }
+
+    .col-md-6, .col-md-4, .col-md-3, .col-12 {
+        width: 95%; /* Ancho completo para todas las columnas */
+        padding: 0px 15px; /* Ajusta el padding */
+    }
+
+    .about-us-image {
+        margin-top: 30px; /* Espacio superior para la imagen en la sección "Quiénes Somos" */
+    }
+
+    .highlight-card{
+        padding: 30px;
+    }
+
+    /* Ajustes para la tabla de oferta */
+    #oferta .table-responsive {
+        overflow-x: auto; /* Desplazamiento horizontal si es necesario */
+        -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en iOS */
+    }
+
+    #oferta .table {
+        width: 100%; /* Ancho completo */
+        margin-bottom: 30px; /* Reduce el margen inferior */
+    }
+
+    #oferta .table th, #oferta .table td {
+        font-size: 0.9em; /* Reduce el tamaño de la fuente */
+        padding: 10px; /* Ajusta el padding */
+    }
+
+    /* Ajustes para botones y elementos grandes */
+    .btn, #us-button {
+        width: 100%; /* Ancho completo para botones */
+        margin-bottom: 20px; /* Margen inferior */
+    }
+}
+
+
+/* Media Queries para Móviles */
+@media (max-width: 768px) {
+    /* Ajustes generales para móviles */
+    .navbar-brand img {
+        max-height: 50px; /* Reduce el tamaño del logo */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.8em; /* Reduce el tamaño de la fuente del navbar */
+        margin-right: 8px; /* Reduce el margen entre enlaces */
+    }
+
+    header {
+        height: 60vh; /* Ajusta la altura del header */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce el tamaño del texto del header */
+        margin-top: 20px; /* Ajusta el margen superior */
+    }
+
+    header p {
+        font-size: 1em; /* Reduce el tamaño del párrafo */
+    }
+
+    .cta-btn {
+        font-size: 0.9em; /* Ajusta el tamaño del botón de CTA */
+        padding: 10px 20px; /* Ajusta el padding del botón de CTA */
+    }
+
+    .icon-box, .highlight-card, .timeline-item, .toggle-button, .testimonial-content, #roi {
+        padding: 15px; /* Reduce el padding */
+        margin-bottom: 15px; /* Reduce el margen inferior */
+        width: 100%; /* Ancho completo */
+    }
+
+    .highlight-card{
+        padding: 30px;
+    }
+
+    /* Ajustes para la tabla de oferta */
+    #oferta .table {
+        display: block; /* Muestra la tabla como bloques */
+        width: 100%; /* Ancho completo */
+        overflow-x: auto; /* Permite el scroll horizontal si es necesario */
+        margin-bottom: 20px; /* Margen inferior */
+    }
+
+    #oferta .table th, #oferta .table td {
+        display: block; /* Cada celda en su propia línea */
+        text-align: left; /* Texto alineado a la izquierda */
+        width: 100%; /* Ancho completo */
+        border-bottom: 1px solid #e0e0e0; /* Borde inferior para separación */
+    }
+
+    /* Ajustes para las secciones */
+    .solutions-section, .about-us-section, .process-section, #planes, #contact {
+        padding: 60px 0; /* Reduce el padding de las secciones */
+    }
+
+    .banner-rotativo {
+        height: 8vh; /* Reduce la altura del banner rotativo */
+    }
+
+    .banner-content span {
+        font-size: 2rem; /* Ajusta el tamaño de la fuente en el banner */
+    }
+
+    .d-flex .justify-content-center .align-items-center {
+        flex-direction: column;
+    }
+}
+
+/* Media Queries para Teléfonos Muy Pequeños */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-height: 40px; /* Reduce aún más el tamaño del logo */
+    }
+
+    header {
+        height: 50vh; /* Ajusta la altura del header */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Reduce aún más el tamaño del texto del header */
+        margin-top: 10px; /* Ajusta el margen superior */
+    }
+
+    header p {
+        font-size: 0.9em; /* Reduce el tamaño del párrafo */
+        margin-bottom: 50px; /* Reduce el margen inferior */
+    }
+
+    .cta-btn {
+        font-size: 0.8em; /* Ajusta el tamaño del botón de CTA */
+        padding: 8px 15px; /* Ajusta el padding del botón de CTA */
+    }
+
+    .solutions-section .toggle-container, .about-us-section .about-us-content, .about-us-image, .highlight-card {
+        padding: 0; /* Elimina el padding extra */
+        margin: 0; /* Elimina los márgenes */
+        text-align: center; /* Centra el texto */
+    }
+
+    .solutions-section, .about-us-section, .process-section, #planes, #contact {
+        padding: 40px 0; /* Reduce el padding para pantallas más pequeñas */
+    }
+
+    .icon-box, .highlight-card {
+        margin-bottom: 10px; /* Reduce el margen inferior */
+        padding: 30px;
+
+    }
+
+#planes .icon-box {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#planes  p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+    .timeline-content, #roi {
+        padding: 10px; /* Reduce el padding */
+    }
+
+    .testimonial-content {
+        padding: 20px; /* Ajusta el padding */
+    }
+
+    #us-button {
+        font-size: 1em; /* Ajusta el tamaño del botón */
+        padding: 10px 20px; /* Ajusta el padding del botón */
+    }
+
+    .highlight-card{
+        padding: 30px;
+    }
+
+    .social-media a {
+        font-size: 1.2em; /* Ajusta el tamaño de los iconos sociales */
+        margin: 0 5px; /* Ajusta el margen entre iconos */
+    }
 }
