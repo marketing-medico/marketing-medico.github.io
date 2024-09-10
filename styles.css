@@ -253,7 +253,7 @@ section h2 {
 }
 
 .about-us-section a {
-    color: #b92020;
+    color: #252525;
     text-decoration: none;
     font-weight: 800;
 }
@@ -348,11 +348,72 @@ section h2 {
     border: none;
     transition: color 0.3s ease; /* Transición suave para el hover */
 }
+
+
+
+/* Nueva Sección: Experiencia y Casos de Éxito */
+.experience-section {
+    padding: 80px 0; /* Espaciado arriba y abajo */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.section-title {
+    color: #2376bc; /* Color del título */
+    font-size: 3rem; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    text-align: center; /* Centrado */
+}
+
+.section-subtitle {
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Espacio entre líneas */
+    text-align: center; /* Centrado */
+    margin-bottom: 40px; /* Espacio inferior */
+}
+
+.experience-item {
+    height: 70vh;
+    margin-bottom: 60px; /* Espacio entre cada item */
+    align-items: center; /* Alineación vertical */
+}
+
+.experience-image {
+    text-align: center; /* Centrado */
+    margin-bottom: 20px; /* Espacio inferior en responsive */
+}
+
+.experience-image img {
+    max-width: 90%; /* Imagen ocupa todo el ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.experience-content h4 {
+    color: #2376bc; /* Color del subtítulo */
+    font-size: 1.8rem; /* Tamaño del subtítulo */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 15px; /* Espacio debajo del subtítulo */
+}
+
+.experience-content p {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #777; /* Color del texto */
+    line-height: 1.6; /* Espacio entre líneas */
+}
+
+
+
+
+
+
+
 .testimonials-section {
     padding: 60px 20px;
     background-color: #f9f9f9;
     margin-top: 0px;
-    min-height: 90vh;
+    min-height: 60vh;
 }
 
 .testimonial-item {
@@ -883,84 +944,24 @@ header .container {
 
 
 
-/* Media Queries para Tablets */
-@media (max-width: 992px) {
-    /* Ajustes generales para tablets */
-    .container, .solutions-content {
-        max-width: 100%; /* Ancho completo */
-        padding: 30px 15px; /* Padding a los lados */
-    }
-
-    .navbar-nav {
-        text-align: center; /* Centrar los elementos del navbar */
-    }
-
-    .icon-box, .highlight-card, .timeline-item, .toggle-button, #us-button, .testimonial-content {
-        padding: 20px; /* Reduce el padding */
-        margin-bottom: 20px; /* Reduce el margen inferior */
-        width: 100%; /* Ancho completo */
-    }
-
-    .row {
-        flex-direction: column; /* Column layout para todos los rows */
-        align-items: center; /* Alineación centrada */
-    }
-
-    .col-md-6, .col-md-4, .col-md-3, .col-12 {
-        width: 95%; /* Ancho completo para todas las columnas */
-        padding: 0px 15px; /* Ajusta el padding */
-    }
-
-    .about-us-image {
-        margin-top: 30px; /* Espacio superior para la imagen en la sección "Quiénes Somos" */
-    }
-
-    .highlight-card{
-        padding: 30px;
-    }
-
-    /* Ajustes para la tabla de oferta */
-    #oferta .table-responsive {
-        overflow-x: auto; /* Desplazamiento horizontal si es necesario */
-        -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en iOS */
-    }
-
-    #oferta .table {
-        width: 100%; /* Ancho completo */
-        margin-bottom: 30px; /* Reduce el margen inferior */
-    }
-
-    #oferta .table th, #oferta .table td {
-        font-size: 0.9em; /* Reduce el tamaño de la fuente */
-        padding: 10px; /* Ajusta el padding */
-    }
-
-    /* Ajustes para botones y elementos grandes */
-    .btn, #us-button {
-        width: 100%; /* Ancho completo para botones */
-        margin-bottom: 20px; /* Margen inferior */
-    }
-}
 
 
 /* Media Queries para Móviles */
 @media (max-width: 768px) {
     /* Ajustes generales para móviles */
-    .navbar-brand img {
-        max-height: 50px; /* Reduce el tamaño del logo */
-    }
+
 
     .navbar-nav .nav-link {
         font-size: 0.8em; /* Reduce el tamaño de la fuente del navbar */
         margin-right: 8px; /* Reduce el margen entre enlaces */
     }
 
-    header {
-        height: 60vh; /* Ajusta la altura del header */
+    h1  {
+        font-size: 2rem;
     }
 
-    header h1 {
-        font-size: 2em; /* Reduce el tamaño del texto del header */
+    h1 {
+        font-size: 1.6em; /* Reduce el tamaño del texto del header */
         margin-top: 20px; /* Ajusta el margen superior */
     }
 
@@ -971,6 +972,15 @@ header .container {
     .cta-btn {
         font-size: 0.9em; /* Ajusta el tamaño del botón de CTA */
         padding: 10px 20px; /* Ajusta el padding del botón de CTA */
+        
+    }
+
+#soluciones {
+    height: auto;
+} 
+
+    .solutions-content .container {
+        height: auto;
     }
 
     .icon-box, .highlight-card, .timeline-item, .toggle-button, .testimonial-content, #roi {
@@ -978,26 +988,70 @@ header .container {
         margin-bottom: 15px; /* Reduce el margen inferior */
         width: 100%; /* Ancho completo */
     }
+    .toggle-button {
+        margin-top: 20px;
+        margin-bottom: 0%;
+    }
+
+    #quienes-somos {
+        height: 1000%;
+    }
+
+        #planes {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+.highlight-card {
+    margin-bottom: 2rem;
+}
+
+.icon-box {
+    width: 85%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 2rem;
+}
+
+
+#planes .icon-box {
+    width: 85%;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+
+.col-md-3 {
+    margin: 0%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#planes  p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.icon-box ul li {
+    width: 90%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+    
 
     .highlight-card{
         padding: 30px;
+        margin-bottom: 2rem;
     }
 
-    /* Ajustes para la tabla de oferta */
-    #oferta .table {
-        display: block; /* Muestra la tabla como bloques */
-        width: 100%; /* Ancho completo */
-        overflow-x: auto; /* Permite el scroll horizontal si es necesario */
-        margin-bottom: 20px; /* Margen inferior */
-    }
-
-    #oferta .table th, #oferta .table td {
-        display: block; /* Cada celda en su propia línea */
-        text-align: left; /* Texto alineado a la izquierda */
-        width: 100%; /* Ancho completo */
-        border-bottom: 1px solid #e0e0e0; /* Borde inferior para separación */
-    }
-
+   
     /* Ajustes para las secciones */
     .solutions-section, .about-us-section, .process-section, #planes, #contact {
         padding: 60px 0; /* Reduce el padding de las secciones */
@@ -1022,18 +1076,18 @@ header .container {
         max-height: 40px; /* Reduce aún más el tamaño del logo */
     }
 
-    header {
-        height: 50vh; /* Ajusta la altura del header */
-    }
 
     header h1 {
-        font-size: 1.8em; /* Reduce aún más el tamaño del texto del header */
-        margin-top: 10px; /* Ajusta el margen superior */
+        font-size: 2em; /* Reduce aún más el tamaño del texto del header */
     }
 
     header p {
         font-size: 0.9em; /* Reduce el tamaño del párrafo */
         margin-bottom: 50px; /* Reduce el margen inferior */
+    }
+
+    h2 {
+        font-size: 1rem;
     }
 
     .cta-btn {
@@ -1044,27 +1098,54 @@ header .container {
     .solutions-section .toggle-container, .about-us-section .about-us-content, .about-us-image, .highlight-card {
         padding: 0; /* Elimina el padding extra */
         margin: 0; /* Elimina los márgenes */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         text-align: center; /* Centra el texto */
+        height: auto;
     }
 
     .solutions-section, .about-us-section, .process-section, #planes, #contact {
-        padding: 40px 0; /* Reduce el padding para pantallas más pequeñas */
+        margin: 0px;
     }
 
     .icon-box, .highlight-card {
-        margin-bottom: 10px; /* Reduce el margen inferior */
-        padding: 30px;
+        width: 100%;
+        margin: 0%;
 
     }
 
+#planes {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 #planes .icon-box {
-    margin-left: 15px;
-    margin-right: 15px;
+    width: 85%;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+
+.col-md-3 {
+    margin: 0%;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #planes  p {
     margin-left: 15px;
     margin-right: 15px;
+}
+
+.icon-box ul li {
+    width: 90%;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
     .timeline-content, #roi {
