@@ -405,16 +405,19 @@ section h2 {
 
 
 
-
-
-
+#testimonios h2 {
+    margin-bottom: 5rem;
+}
 
 .testimonials-section {
-    padding: 60px 20px;
+    padding: 10px 20px;
+    padding-bottom: 200px;
     background-color: #f9f9f9;
     margin-top: 0px;
     min-height: 60vh;
 }
+
+
 
 .testimonial-item {
     display: flex;
@@ -455,6 +458,29 @@ section h2 {
     border-radius: 10%;
     width: 40px;
     height: 40px;
+}
+
+/* Estilos para los indicadores del carrusel */
+.carousel-indicators-custom {
+    display: flex;
+    justify-content: center; /* Centra los indicadores */
+    margin-top: 20px; /* Espacio entre la tarjeta del testimonio y los indicadores */
+}
+
+.carousel-indicators-custom button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2376bc; /* Color de los indicadores */
+    border: none;
+    margin: 0 5px; /* Espacio entre los indicadores */
+    transition: background-color 0.3s ease;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Selector Correcto para el Indicador Activo */
+.carousel-indicators-custom button.active {
+    background-color: #b92020; /* Color del indicador activo */
 }
 
 
