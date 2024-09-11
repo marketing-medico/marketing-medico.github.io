@@ -1130,6 +1130,7 @@ header .container {
         height: auto;
     }
 
+
     .solutions-section, .about-us-section, .process-section, #planes, #contact {
         margin: 0px;
     }
@@ -1138,6 +1139,34 @@ header .container {
         width: 100%;
         margin: 0%;
 
+    }
+
+    .highlight-card {
+        margin-bottom: 2rem;
+    }
+
+    #problemas .icon-box{
+        padding-bottom: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #soluciones .solutions-section {
+        height: 2000px;
+    }
+
+    #casos-exito .container {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+    }
+
+    .experience-item {
+        height: auto;
     }
 
 #planes {
