@@ -1204,7 +1204,7 @@ header .container {
     }
 
     .cta-btn {
-        font-size: 1.3em; /* Ajusta el tamaño del botón de CTA */
+        font-size: 1em; /* Ajusta el tamaño del botón de CTA */
         padding: 8px 15px; /* Ajusta el padding del botón de CTA */
     }
 
@@ -1345,7 +1345,7 @@ header .container {
 .container-mobile {
     max-width: 600px; /* Ancho máximo */
     margin: 0 auto; /* Centrado del contenedor */
-    padding: 20px; /* Espaciado interno */
+    padding: 15px; /* Espaciado interno */
     background-color: #2376bc; /* Fondo blanco para contraste */
     border-radius: 10px; /* Bordes redondeados */
     
