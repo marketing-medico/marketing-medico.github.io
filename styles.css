@@ -486,6 +486,26 @@ section h2 {
 
 
 
+.offer-cta {
+    color: #333; /* Subtítulos en blanco */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Botones de tabla */
+#planes a {
+    background-color: #2376bc;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.5em;
+    transition: background 0.3s ease;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+
 
 
 
@@ -623,6 +643,8 @@ section h2 {
     font-size: 0.8rem;
     margin-bottom: 2rem;
 }
+
+
 
 .icon-box {
     background: #fff;
