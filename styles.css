@@ -1017,6 +1017,10 @@ header .container {
         margin-top: 20px; /* Ajusta el margen superior */
     }
 
+    h2 {
+        font-size: 2rem;
+    }
+
     header p {
         font-size: 1em; /* Reduce el tamaño del párrafo */
     }
@@ -1032,6 +1036,10 @@ header .container {
 } 
 
     .solutions-content .container {
+        height: auto;
+    }
+
+    .solutions-content {
         height: auto;
     }
 
@@ -1141,6 +1149,11 @@ header .container {
     .d-flex .justify-content-center .align-items-center {
         flex-direction: column;
     }
+
+    h2 {
+        font-size: 2rem;
+    }
+
 }
 
 /* Media Queries para Teléfonos Muy Pequeños */
