@@ -404,6 +404,10 @@ section h2 {
 }
 
 
+#casos-exito-mobile {
+    display: none;
+}
+
 
 #testimonios h2 {
     margin-bottom: 5rem;
@@ -1042,6 +1046,27 @@ header .container {
 }
 
 
+#casos-exito-mobile {
+    display: flex;
+
+}
+
+
+#casos-exito-mobile {
+    display: flex;
+    
+}
+
+.experience-item{
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#casos-exito{
+    display: none;
+}
+
 #planes .icon-box {
     width: 85%;
     margin-left: 0px;
@@ -1165,39 +1190,6 @@ header .container {
 
     }
 
-    .experience-item {
-        display: flex;
-        flex-direction: column; /* Cambio a formato columna */
-        align-items: center; /* Centrado del contenido */
-        text-align: center; /* Centra el texto */
-        margin-bottom: 40px; /* Espacio entre elementos */
-    }
-
-    /* Ajusta el orden de los elementos */
-    .experience-item .experience-image {
-        order: 1; /* Imagen o GIF primero */
-        width: 100%; /* Ancho completo */
-        margin-bottom: 20px; /* Espacio debajo de la imagen */
-    }
-
-    .experience-item .experience-content h4 {
-        order: 2; /* Título después de la imagen */
-        font-size: 1.6rem; /* Ajusta el tamaño del título */
-        margin-top: 10px; /* Espacio superior para el título */
-    }
-
-    .experience-item .experience-content p {
-        order: 3; /* Texto después del título */
-        font-size: 1.1rem; /* Ajusta el tamaño del texto */
-        margin-top: 10px; /* Espacio superior para el párrafo */
-        padding: 0 20px; /* Añade padding para mayor legibilidad */
-    }
-
-    /* Asegura que el contenedor de contenido esté centrado y tome el ancho completo */
-    .experience-content {
-        width: 100%;
-        padding: 0 20px; /* Espacio lateral para legibilidad */
-    }
 
 
 
