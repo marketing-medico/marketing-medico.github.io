@@ -1015,6 +1015,7 @@ header .container {
 
 
 
+
 /* Media Queries para Móviles */
 @media (max-width: 768px) {
     /* Ajustes generales para móviles */
@@ -1169,6 +1170,14 @@ header .container {
 
     h2 {
         font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 10px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .container-mobile {
+        padding: 0 10px; /* Reduce aún más el padding para móviles */
     }
 
 }
