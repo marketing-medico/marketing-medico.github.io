@@ -10,7 +10,7 @@
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -697,219 +697,209 @@
 
 
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
+<script>
+// Evitar desbordamiento horizontal en todas las pantallas
 window.addEventListener('load', function() {
     document.body.style.overflowX = 'hidden';
 });
 
+// Función para añadir y remover la clase active de manera cíclica
+function toggleUnderline() {
+    const element = document.querySelector('.underline-on-scroll');
+    element.classList.add('active');
 
-        // Función para añadir y remover la clase active de manera cíclica
-        function toggleUnderline() {
-            const element = document.querySelector('.underline-on-scroll');
-            element.classList.add('active');
+    setTimeout(() => {
+        element.classList.remove('active');
+    }, 3000); // Remueve la clase después de 3 segundos para reiniciar la animación
+}
 
+// Función para detectar si el elemento está en el viewport y activar el subrayado
+function handleScroll() {
+    const element = document.querySelector('.underline-on-scroll');
+    const rect = element.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+        element.classList.add('active');
+
+        // Si estamos en pantallas mayores a 768px, iniciamos el ciclo de subrayado
+        if (window.innerWidth > 768) {
+            setInterval(toggleUnderline, 6000);
+        }
+
+        // Remover el evento de scroll después de la primera activación
+        window.removeEventListener('scroll', handleScroll);
+    }
+}
+
+// Añadir el evento de scroll para manejar el subrayado dinámico
+window.addEventListener('scroll', handleScroll);
+
+// Función para manejar los toggles y cambiar las imágenes de forma dinámica
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+    const dynamicImage = document.getElementById('dynamic-image');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const imageSrc = this.getAttribute('data-image');
+            dynamicImage.style.opacity = '0'; // Transición suave de opacidad
             setTimeout(() => {
-                element.classList.remove('active');
-            }, 3000); // Remueve la clase después de 3 segundos para reiniciar la animación
-        }
+                dynamicImage.src = imageSrc;
+                dynamicImage.style.opacity = '1';
+            }, 300);
 
-        // Función para detectar si el elemento está en el viewport
-        function handleScroll() {
-            const element = document.querySelector('.underline-on-scroll');
-            const rect = element.getBoundingClientRect();
+            // Mostrar u ocultar el contenido del toggle
+            const content = this.nextElementSibling;
+            const allContents = document.querySelectorAll('.toggle-content');
 
-            // Comprobar si el elemento está en el viewport
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                element.classList.add('active');
-
-                // Iniciar el ciclo de subrayado cada 6 segundos
-                setInterval(toggleUnderline, 6000);
-
-                // Remover el evento de scroll después de la primera activación
-                window.removeEventListener('scroll', handleScroll);
-            }
-        }
-
-        // Añadir el evento de scroll
-        window.addEventListener('scroll', handleScroll);
-
-         // Función para manejar los toggles y cambiar las imágenes
-         document.addEventListener('DOMContentLoaded', function () {
-            const toggleButtons = document.querySelectorAll('.toggle-button');
-            const dynamicImage = document.getElementById('dynamic-image');
-
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    // Cambiar la imagen dinámica
-                    const imageSrc = this.getAttribute('data-image');
-                    dynamicImage.style.opacity = '0'; // Transición suave
-                    setTimeout(() => {
-                        dynamicImage.src = imageSrc;
-                        dynamicImage.style.opacity = '1';
-                    }, 300);
-
-                    // Mostrar u ocultar el contenido del toggle
-                    const content = this.nextElementSibling;
-                    const allContents = document.querySelectorAll('.toggle-content');
-
-                    allContents.forEach(c => {
-                        if (c !== content) {
-                            c.style.maxHeight = '0';
-                            c.style.padding = '0';
-                            c.classList.remove('open');
-                        }
-                    });
-
-                    if (content.classList.contains('open')) {
-                        content.style.maxHeight = '0';
-                        content.style.padding = '0';
-                        content.classList.remove('open');
-                    } else {
-                        content.style.maxHeight = `${content.scrollHeight}px`;
-                        content.style.padding = '10px 15px';
-                        content.classList.add('open');
-                    }
-                });
-            });
-        });
-    </script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show'); // Añade la clase para la animación
+            allContents.forEach(c => {
+                if (c !== content) {
+                    c.style.maxHeight = '0';
+                    c.style.padding = '0';
+                    c.classList.remove('open');
                 }
             });
-        });
 
-        // Selecciona las cards de proceso
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        timelineItems.forEach((item, index) => {
-            // Alterna entre las animaciones de izquierda y derecha
-            if (index % 2 === 0) {
-                item.classList.add('animate-right'); // Añade animación desde la derecha para cada segundo item
+            if (content.classList.contains('open')) {
+                content.style.maxHeight = '0';
+                content.style.padding = '0';
+                content.classList.remove('open');
+            } else {
+                content.style.maxHeight = `${content.scrollHeight}px`;
+                content.style.padding = '10px 15px';
+                content.classList.add('open');
             }
-            observer.observe(item); // Observa cada card
+        });
+    });
+});
+
+// Animaciones de entrada en las cards de proceso
+document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
         });
     });
 
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item, index) => {
+        if (index % 2 === 0) {
+            item.classList.add('animate-right');
+        }
+        observer.observe(item);
+    });
+});
 
-
-    document.addEventListener('DOMContentLoaded', () => {
+// Carrusel de imágenes responsivo
+document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carousel-track');
     const slides = Array.from(track.children);
     const nextButton = document.querySelector('.next-btn');
     const prevButton = document.querySelector('.prev-btn');
-    const slideWidth = slides[0].getBoundingClientRect().width;
+    let slideWidth = slides[0].getBoundingClientRect().width;
 
     let currentSlide = 0;
 
-    // Arrange the slides next to one another
+    // Coloca los slides uno al lado del otro
     const setSlidePosition = (slide, index) => {
         slide.style.left = slideWidth * index + 'px';
     };
-
     slides.forEach(setSlidePosition);
 
-    // Move to the next slide
+    // Ajustar el tamaño del carrusel en caso de redimensionamiento de la pantalla
+    window.addEventListener('resize', () => {
+        slideWidth = slides[0].getBoundingClientRect().width;
+        slides.forEach(setSlidePosition);
+        track.style.transform = 'translateX(-' + slideWidth * currentSlide + 'px)';
+    });
+
+    // Siguiente slide
     nextButton.addEventListener('click', () => {
         currentSlide = (currentSlide + 1) % slides.length;
         track.style.transform = 'translateX(-' + slideWidth * currentSlide + 'px)';
     });
 
-    // Move to the previous slide
+    // Slide anterior
     prevButton.addEventListener('click', () => {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         track.style.transform = 'translateX(-' + slideWidth * currentSlide + 'px)';
     });
 });
 
-
+// Mostrar las icon-boxes de manera diferida para mejorar la experiencia de usuario
 document.addEventListener('DOMContentLoaded', function () {
-    const boxes = document.querySelectorAll('.icon-box'); // Seleccionar todas las cards
+    const boxes = document.querySelectorAll('.icon-box');
 
     function checkVisibility() {
-        let delay = 0; // Inicializar un retardo
+        let delay = 0;
         boxes.forEach((box, index) => {
             const boxTop = box.getBoundingClientRect().top;
-            const triggerBottom = window.innerHeight * 0.85; // Se activará cuando la card esté al 85% de la ventana
+            const triggerBottom = window.innerHeight * 0.85;
 
             if (boxTop < triggerBottom && !box.classList.contains('visible')) {
                 setTimeout(() => {
-                    box.classList.add('visible'); // Añade la clase 'visible' para activar la animación
+                    box.classList.add('visible');
                 }, delay);
-                delay += 600; // Incrementar el retardo en 300ms para cada tarjeta
+                delay += 600; // Incrementa el retraso para cada card
             }
         });
     }
 
-    window.addEventListener('scroll', checkVisibility); // Detectar el scroll
-    checkVisibility(); // Para verificar la visibilidad al cargar la página
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
 });
 
-
-// Añadir animación de entrada para todos los elementos con la clase 'fade-in'
+// Añadir animaciones de entrada para los elementos con la clase fade-in
 document.addEventListener('DOMContentLoaded', function () {
     const fadeElements = document.querySelectorAll('.fade-in');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('show'); // Añade la clase para la animación
+                entry.target.classList.add('show');
             }
         });
     });
 
     fadeElements.forEach((element) => {
-        observer.observe(element); // Observa cada elemento
+        observer.observe(element);
     });
 });
 
+// Carrusel de testimonios y actualización de indicadores
+document.addEventListener('DOMContentLoaded', function () {
+    const indicators = document.querySelectorAll('.carousel-indicators-custom button');
+    const carousel = new bootstrap.Carousel(document.querySelector('#testimonialCarousel'));
 
-
-</script>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const indicators = document.querySelectorAll('.carousel-indicators-custom button');
-        const carousel = new bootstrap.Carousel(document.querySelector('#testimonialCarousel'));
-    
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', function () {
-                carousel.to(index);  // Mueve al slide correspondiente
-                updateIndicators(index);  // Actualiza el estado de los indicadores
-            });
-        });
-    
-        // Actualiza los indicadores según el slide actual
-        function updateIndicators(activeIndex) {
-            indicators.forEach((indicator, index) => {
-                if (index === activeIndex) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
-        }
-    
-        // Escuchar el evento 'slid.bs.carousel' para actualizar los indicadores cuando el carrusel cambia
-        document.querySelector('#testimonialCarousel').addEventListener('slid.bs.carousel', function (event) {
-            updateIndicators(event.to);  // 'event.to' es el índice del slide activo
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', function () {
+            carousel.to(index);  // Mueve al slide correspondiente
+            updateIndicators(index);  // Actualiza el estado de los indicadores
         });
     });
 
+    function updateIndicators(activeIndex) {
+        indicators.forEach((indicator, index) => {
+            if (index === activeIndex) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    }
 
+    // Escuchar el evento para actualizar los indicadores
+    document.querySelector('#testimonialCarousel').addEventListener('slid.bs.carousel', function (event) {
+        updateIndicators(event.to);
+    });
+});
+</script>
 
-    
-    </script>
 
     
     
