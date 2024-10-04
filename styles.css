@@ -425,6 +425,10 @@ section h2 {
     transition: background 0.3s ease;
 }
 
+#mc_embed_signup .button:hover {
+    background-color: #b92020;
+}
+
 
 
 
@@ -1315,6 +1319,114 @@ table th, table td {
     display: none;
 }
 
+
+/* Estilos para el CTA del eBook */
+.ebook-cta {
+    margin-top: 40px;
+    background-color: #2376bc;
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ebook-cta img {
+    width: 80%;
+    align-self: center;
+}
+
+.ebook-cta h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ebook-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.ebook-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f8f8f8;
+    width: 30%;
+    color: #2d2d2d;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+#mc_embed_signup .foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ebook-btn:hover {
+    background-color: #ff4d4d;
+    
+}
+
+#mc_embed_shell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mc_embed_signup{
+    background:#fff;
+    color: #000;
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif; 
+    width: 95%;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-radius: 20px;
+    
+}
+
+#mc_embed_signup_scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#mc_embed_signup_scroll h2 { 
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#mc_embed_signup .button {
+    font-family: "Poppins", sans-serif;
+    align-self: center;
+    height: auto;
+    background-color: #2376bc;
+    color: #ffff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+#mc_embed_signup .button:hover {
+    background-color: #b92020;
+}
+
+
+
+
+
 #planes .icon-box {
     width: 85%;
     margin-left: 0px;
@@ -1388,6 +1500,13 @@ table th, table td {
     table {
         width: 100%;
         max-width: 100%;
+    }
+
+
+    .carousel-indicators-custom button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
     }
 
 }
