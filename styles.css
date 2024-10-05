@@ -429,6 +429,12 @@ section h2 {
     background-color: #b92020;
 }
 
+.clear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 
 
@@ -659,8 +665,8 @@ section h2 {
 }
 
 .carousel-indicators-custom button {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #2376bc; /* Color de los indicadores */
     border: none;
