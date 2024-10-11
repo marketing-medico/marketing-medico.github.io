@@ -1351,7 +1351,8 @@ table th, table td {
 .ebook-cta {
     margin-top: 40px;
     background-color: #2376bc;
-    padding: 40px;
+    width: 100%;
+    padding: 20px;
     border-radius: 10px;
     color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -1402,7 +1403,7 @@ table th, table td {
 }
 
 #mc_embed_signup {
-    width: 90%; /* Increase form width for smaller screens */
+    width: 100%; /* Increase form width for smaller screens */
     padding: 1rem;
 }
 
