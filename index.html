@@ -84,7 +84,13 @@
         <div class="container">
             <h1 class="fade-in">Llená tu consultorio con pacientes que valoran tu trabajo</h1>
             <p class="fade-in">Soluciones de marketing digital diseñadas para médicos que quieren atraer más pacientes particulares y mejorar su facturación.</p>
-            <a href="https://wa.me/5491160313292?text=Hola%2C+me+gustar%C3%ADa+consultar+por+los+servicios+de+marketing+m%C3%A9dico.+%C2%BFMe+podr%C3%ADan+dar+m%C3%A1s+informaci%C3%B3n%3F" class="cta-btn fade-in">Agendá una consulta gratuita</a>
+            <a id="contactbutton" href="https://wa.me/5491160313292?text=Hola%2C+me+gustar%C3%ADa+consultar+por+los+servicios+de+marketing+m%C3%A9dico.+%C2%BFMe+podr%C3%ADan+dar+m%C3%A1s+informaci%C3%B3n%3F" class="cta-btn fade-in">Agendá una consulta gratuita</a>
+            <script type="text/javascript">
+                $('#contactbutton').click(function() {
+                  fbq('track', 'Contacto');
+                });
+              </script>
+    
         </div>
     </header>
 
